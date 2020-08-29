@@ -1,0 +1,39 @@
+<ejs-tab id="element" #element>
+    <e-tabitems>
+        <e-tabitem *ngFor="let data of datas">
+            <ng-template #headerText>
+
+                <div> {{data.tabName}} </div>
+
+            </ng-template>
+            <ng-template #content>
+                <div class="d-flex align-items-center">
+                    <table class="table table-sm my-3 ">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Sr.No</th>
+                                <th scope="col">Query</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Response</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let queries of data.queries">
+                                <th scope="row">{{queries.queryNo}}</th>
+                                <td>{{queries.query}}</td>
+                                <td>
+                                    <select class="custom-select " id="inputGroupSelect01">
+                                        <option selected>Status</option>
+                                        <option value="1">Accept</option>
+                                        <option value="2">Reject</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </ng-template>
+        </e-tabitem>
+    </e-tabitems>
+</ejs-tab>
