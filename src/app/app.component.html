@@ -1,11 +1,23 @@
 <div class="container-fluid d-flex flex-column align-items-center">
-  <div style="width: 100%;text-align: left;">
-    <div>
-      <h2 style="letter-spacing: 5px;">LOGO</h2>
-    </div>
+  <div class="custom-navbar">
+    <div><img src="../assets/wiley-Logo.png" alt="wiley Logo" /></div>
     <div id="custom-toolbar"></div>
   </div>
-  <div style="width: 70%;">
-    <app-syncfusion-tabs></app-syncfusion-tabs>
+  <div class="row container-body border-top">
+    <div class="col-2 left-section"></div>
+    <div class="col-7 tabs-section border-left border-right">
+      <app-syncfusion-tabs></app-syncfusion-tabs>
+    </div>
+    <div class="col-3 right-section d-flex flex-column py-3 ">
+      <div>
+        <h6>Attachments</h6>
+        <hr />
+      </div>
+      <div>
+        <input type="file" id="browseFile" multiple />
+        <label for="browseFile" id="browseFileLabel"> <i class="fa fa-cloud-upload"></i> Choose file</label>
+        <hr />
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,54 @@
+.wiley-logo {
+  padding: 15px 0px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+.custom-navbar img {
+  max-width: 85%;
+  max-height: 300px;
+  padding-left: 15px;
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+.custom-navbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+.container-body {
+  margin-top: 65px;
+  width: 100%;
+}
+#custom-toolbar {
+  margin-left: 30px;
+}
+.left-section {
+  position: fixed;
+  left: 0;
+  min-height: 100%;
+  height: auto;
+}
+.tabs-section {
+  margin-left: 17%;
+  height: auto;
+  min-height: 90vh;
+}
+.right-section {
+  position: fixed;
+  right: 0;
+  min-height: 100%;
+  height: auto;
+}
+.right-section input[type="file"] {
+  display: none;
+}
+#browseFileLabel {
+  font-size: 16px;
+  cursor: pointer;
+  background: rgba(105, 100, 100, 0.055);
+  padding: 5px 10px;
+  border-radius: 5px;
+}

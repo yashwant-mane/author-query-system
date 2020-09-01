@@ -1,0 +1,32 @@
+.e-toolbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px !important;
+}
+.e-toolbar-wrapper .e-rte-toolbar {
+  width: auto !important;
+  background: #fff;
+  height: 25px !important;
+}
+.e-toolbar .e-toolbar-items {
+  background: #fff !important;
+}
+.e-toolbar .e-tbar-btn {
+  background: transparent !important;
+}
+.e-richtexteditor .e-rte-content {
+  border: none !important;
+}
+.query-table th:nth-child(1) {
+  width: 7%;
+}
+.query-table th:nth-child(2) {
+  width: 40%;
+}
+.query-table th:nth-child(3) {
+  width: 13%;
+}
+.query-table th:nth-child(4) {
+  width: 40%;
+}

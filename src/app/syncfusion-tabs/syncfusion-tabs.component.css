@@ -1,0 +1,9 @@
+.journal-tab h2 {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 10px 0;
+}
+.e-tab .e-tab-header .e-toolbar-item .e-tab-text {
+  text-transform: capitalize !important;
+  font-size: 15px;
+}

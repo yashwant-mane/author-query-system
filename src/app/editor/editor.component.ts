@@ -18,14 +18,34 @@ export class EditorComponent implements OnInit {
   ngOnInit(): void {}
   onCreate(event): void {
     const appParent = this.appComponent.getToolbar();
+    $(appParent).empty();
     $(appParent).append($('.e-toolbar-wrapper'));
   }
   public tools = {
     type: 'MultiRow',
-    items: ['Bold', 'Italic', 'Undo', 'Redo', 'SubScript', 'SuperScript'],
+    items: [
+      'Bold',
+      'Italic',
+      'Undo',
+      'Redo',
+      'SubScript',
+      'SuperScript',
+      {
+        tooltipText: 'Attach file',
+        undo: true,
+        click: this.onAttachClick.bind(this),
+        template:
+          '<button class="e-tbar-btn e-control e-btn e-lib e-icon-btn" tabindex="-1" id="custom_tbar" style="width:100%; "><div class="e-tbar-btn-text" style="font-weight: 500;"><i class="fa fa-paperclip"></i></div></button>',
+      },
+    ],
   };
-
-  public datas = [
+  onAttachClick() {
+    alert('Attachments');
+  }
+  public testProp = {
+    name: 'John Doe',
+  };
+  public data = [
     {
       tabName: 'Metadata',
       queries: [
