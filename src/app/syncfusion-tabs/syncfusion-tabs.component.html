@@ -1,6 +1,64 @@
 <ejs-tab id="element" #element>
     <e-tabitems>
-        <e-tabitem *ngFor="let data of datas">
+        <e-tabitem>
+            <ng-template #headerText>
+                <div> Journal Information
+
+
+                </div>
+            </ng-template>
+            <ng-template #content>
+                <app-editor></app-editor>
+            </ng-template>
+        </e-tabitem>
+        <e-tabitem>
+            <ng-template #headerText>
+                <div> Contributor Information
+                </div>
+            </ng-template>
+            <ng-template #content>
+                <app-editor></app-editor>
+            </ng-template>
+        </e-tabitem>
+        <e-tabitem>
+            <ng-template #headerText>
+                <div> Figure </div>
+            </ng-template>
+            <ng-template #content>
+                <app-editor></app-editor>
+            </ng-template>
+        </e-tabitem>
+        <e-tabitem>
+            <ng-template #headerText>
+                <div> Table </div>
+            </ng-template>
+            <ng-template #content>
+                <app-editor></app-editor>
+            </ng-template>
+        </e-tabitem>
+        <e-tabitem>
+            <ng-template #headerText>
+                <div> Body </div>
+            </ng-template>
+            <ng-template #content>
+                <app-editor></app-editor>
+            </ng-template>
+        </e-tabitem>
+        <e-tabitem>
+            <ng-template #headerText>
+                <div> References </div>
+            </ng-template>
+            <ng-template #content>
+                <app-editor></app-editor>
+            </ng-template>
+        </e-tabitem>
+    </e-tabitems>
+</ejs-tab>
+
+
+<!-- 
+
+    <e-tabitem *ngFor="let data of datas">
             <ng-template #headerText>
 
                 <div> {{data.tabName}} </div>
@@ -19,21 +77,25 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let queries of data.queries">
-                                <th scope="row">{{queries.queryNo}}</th>
-                                <td>{{queries.query}}</td>
-                                <td>
-                                    <select class="custom-select " id="inputGroupSelect01">
-                                        <option selected>Status</option>
+                                <th scope="row" style="width: 20%;">{{queries.queryNo}}</th>
+                                <td style="width: 30%;">{{queries.query}}</td>
+                                <td style="width: 20%;">
+                                    <select class="" style="border: none;
+                                    padding: 0px 5px;">
                                         <option value="1">Accept</option>
                                         <option value="2">Reject</option>
                                     </select>
                                 </td>
-                                <td></td>
+                                <td style="width: 30%;">
+                                    <span>&#9998;</span>
+                                    <div class="response">
+                                        <p contenteditable="true"></p>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </ng-template>
         </e-tabitem>
-    </e-tabitems>
-</ejs-tab>
+ -->

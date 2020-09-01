@@ -1,8 +1,44 @@
-<ejs-richtexteditor id='defaultRTE'>
+<ejs-richtexteditor id='defaultRTE' [toolbarSettings]='tools' (created)="onCreate($event)">
     <ng-template #valueTemplate>
         <div>
-
+            <h2>Journal of Money, Credit and Banking (JMCB)</h2>
         </div>
+        <table class="table table-sm my-3 " contenteditable="false">
+            <tbody>
+                <tr>
+                    <th scope="row">Short Title</th>
+                    <td>Journal of Money, Credit and Banking</td>
+                </tr>
+                <tr>
+                    <th scope="row">DOI</th>
+                    <td>10.1111/(ISSN)1538-4616</td>
 
+                </tr>
+                <tr>
+                    <th scope="col">electronic ISSN</th>
+                    <td>1538-4616</td>
+                </tr>
+                <tr>
+                    <th scope="col">print ISSN</th>
+                    <td>0022-2879</td>
+                </tr>
+                <tr>
+                    <th scope="col">Article ID</th>
+                    <td>JMCB12695</td>
+                </tr>
+                <tr>
+                    <th scope="col">Article type</th>
+                    <td>article</td>
+                </tr>
+                <tr>
+                    <th scope="col">Article DOI</th>
+                    <td>10.1111/jmcb.12695</td>
+                </tr>
+                <tr>
+                    <th scope="col">Copyright</th>
+                    <td>© 2020 The Ohio State University</td>
+                </tr>
+            </tbody>
+        </table>
     </ng-template>
 </ejs-richtexteditor>
