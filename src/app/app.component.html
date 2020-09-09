@@ -1,22 +1,85 @@
 <div class="container-fluid d-flex flex-column align-items-center">
   <div class="custom-navbar">
     <div><img src="../assets/wiley-Logo.png" alt="wiley Logo" /></div>
-    <div id="custom-toolbar"></div>
+    <div class="custom-toolbar d-flex align-items-center justify-content-around" id="custom-toolbar ">
+      <div><button class="btn-toolbar" (click)="onBold()"><i class="fas fa-bold"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onItalic()"><i class="fas fa-italic"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onUnderline()"><i class="fas fa-underline"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onSubscript()"><i class="fas fa-subscript"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onSuperscript()"><i class="fas fa-superscript"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onAttach()"><i class="fas fa-paperclip"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onComment()"><i class="far fa-comment-alt"></i></button></div>
+    </div>
   </div>
   <div class="row container-body border-top">
-    <div class="col-2 left-section"></div>
-    <div class="col-7 tabs-section border-left border-right">
-      <app-syncfusion-tabs></app-syncfusion-tabs>
+    <div class="left-section"></div>
+    <div class="tabs-section border-left border-right">
+      <app-syncfusion-tabs #child></app-syncfusion-tabs>
     </div>
-    <div class="col-3 right-section d-flex flex-column py-3 ">
-      <div>
-        <h6>Attachments</h6>
-        <hr />
+    <div class="right-section d-flex flex-column py-3 ">
+      <!-- Attachments div -->
+      <div class="attachment-section">
+        <div class="attachments-heading">
+          <h5>Attachments</h5>
+        </div>
+        <div class="attachments-body">
+          <hr />
+          <ejs-uploader #defaultupload [autoUpload]='true' [asyncSettings]='path' (success)="onUploadSuccess($event)"
+            (failure)="onUploadFailure($event)" (created)="appendBrowse()"></ejs-uploader>
+        </div>
       </div>
-      <div>
-        <input type="file" id="browseFile" multiple />
-        <label for="browseFile" id="browseFileLabel"> <i class="fa fa-cloud-upload"></i> Choose file</label>
-        <hr />
+      <!-- Accept Response -->
+      <div class="accept-response-section">
+        <div class="response-heading">
+          <h5>Query Response</h5>
+        </div>
+        <div class="response-body">
+          <hr />
+          <div class="custom-editor-section" id="response-Editor-section">
+            <label>Write response</label>
+            <div class="custom-editor" id="response-Editor" contenteditable="true">
+            </div>
+            <button type="button" class="response-submit-btn" (click)="onResponseAdd()">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Reject Response -->
+      <div class="reject-response-section">
+        <div class="response-heading">
+          <h5>Query Response</h5>
+        </div>
+        <div class="response-body">
+          <hr />
+          <div class="custom-editor-section" id="remark-Editor-section">
+            <h6 class="auQuery">AQ:</h6>
+            <label>Remark</label>
+            <div class="custom-editor" id="remark-Editor" contenteditable="true">
+            </div>
+            <button class="remark-submit-btn" (click)="onRemarkAdd()">Add</button>
+          </div>
+        </div>
+      </div>
+      <!-- Comment -->
+      <div class="comment-section">
+        <div class="response-heading">
+          <h5>Query Response</h5>
+        </div>
+        <div class="response-body">
+          <hr />
+          <div class="response-list">
+            <ol>
+              <li *ngFor="let item of acceptResponseArr; let i = index" (click)="onLiClick(item)">
+                <div>
+                  <div><a href="#{{item.id}}">{{item.response}}</a></div>
+                </div>
+                <div class="response-icons">
+                  <div (click)="onEditResponse(item,i)"><i class="fas fa-pencil-alt"></i></div>
+                  <div (click)="acceptResponseArr.splice(i,1)"><i class="fas fa-trash"></i></div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   </div>

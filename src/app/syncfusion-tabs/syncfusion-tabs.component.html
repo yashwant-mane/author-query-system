@@ -1,5 +1,5 @@
 <ejs-tab id="element" #element>
-    <e-tabitems>
+    <e-tabitems *ngFor="let AQ of AQ">
         <e-tabitem>
             <ng-template #headerText>
                 <div> Journal Information
@@ -10,40 +10,40 @@
                     <div class="journal-tab">
                         <h2>Journal of Money, Credit and Banking (JMCB)</h2>
                     </div>
-                    <table class="table table-sm my-3 " contenteditable="false">
-                        <tbody>
+                    <table class="table table-sm my-3 ">
+                        <tbody *ngFor="let item of AQ.sampleData.journalDetails.Journaldata">
                             <tr>
                                 <th scope="row">Short Title</th>
-                                <td>Journal of Money, Credit and Banking</td>
+                                <td>{{item.ShortTitle}}</td>
                             </tr>
                             <tr>
                                 <th scope="row">DOI</th>
-                                <td>10.1111/(ISSN)1538-4616</td>
+                                <td>{{item.DOI}}</td>
 
                             </tr>
                             <tr>
                                 <th scope="col">electronic ISSN</th>
-                                <td>1538-4616</td>
+                                <td>{{item.electronicISSN}}</td>
                             </tr>
                             <tr>
                                 <th scope="col">print ISSN</th>
-                                <td>0022-2879</td>
+                                <td>{{item.printISSN}}</td>
                             </tr>
                             <tr>
                                 <th scope="col">Article ID</th>
-                                <td>JMCB12695</td>
+                                <td>{{item.ArticleID}}</td>
                             </tr>
                             <tr>
                                 <th scope="col">Article type</th>
-                                <td>article</td>
+                                <td>{{item.Articletype}}</td>
                             </tr>
                             <tr>
                                 <th scope="col">Article DOI</th>
-                                <td>10.1111/jmcb.12695</td>
+                                <td>{{item.ArticleDOI}}</td>
                             </tr>
                             <tr>
                                 <th scope="col">Copyright</th>
-                                <td>© 2020 The Ohio State University</td>
+                                <td>{{item.Copyright}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -56,7 +56,70 @@
                 </div>
             </ng-template>
             <ng-template #content>
-                <app-editor></app-editor>
+                <div class="py-3">
+                    <div>
+                        <h4>The Welfare Costs of Self‐Fulfilling Bank Runs</h4>
+                    </div>
+                    <table class="table table-sm my-3 col-3-table" contenteditable="false">
+                        <thead>
+                            <tr>
+                                <th scope="col">Element</th>
+                                <th scope="col">Manuscript</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let title of AQ.sampleData.cuData.title.manuscript">
+                                <td>Title</td>
+                                <td>{{title}}</td>
+                                <td class="status-icon">
+                                    <div (click)="onAccept($event,title)"><i class="fas fa-check"></i></div>
+                                    <div (click)="onReject($event,title)"><i class="fas fa-times"></i></div>
+                                </td>
+                            </tr>
+                            <tr *ngFor="let data of AQ.sampleData.cuData.author_group.manuscript">
+                                <td>Author</td>
+                                <td scope="row">{{data}}</td>
+                                <td class="status-icon">
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                </td>
+                            </tr>
+                            <tr *ngFor="let data of AQ.sampleData.cuData.affiliations.manuscript">
+                                <td>Affiliation</td>
+                                <td scope="row">{{data}}</td>
+                                <td class="status-icon">
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                </td>
+                            </tr>
+                            <tr *ngFor="let data of AQ.sampleData.cuData.corresponding_author_address.manuscript">
+                                <td>Corresponding Author Address</td>
+                                <td scope="row">{{data}}</td>
+                                <td class="status-icon">
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                </td>
+                            </tr>
+                            <tr *ngFor="let data of AQ.sampleData.cuData.corresponding_author_email_address.manuscript">
+                                <td>Corresponding Author Email Address</td>
+                                <td scope="row">{{data}}</td>
+                                <td class="status-icon">
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                </td>
+                            </tr>
+                            <tr *ngFor="let data of AQ.sampleData.cuData.keywords.manuscript">
+                                <td>Keyword</td>
+                                <td scope="row">{{data}}</td>
+                                <td class="status-icon">
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </ng-template>
         </e-tabitem>
         <e-tabitem>
@@ -64,7 +127,27 @@
                 <div> Figure </div>
             </ng-template>
             <ng-template #content>
-                <app-editor></app-editor>
+                <table class="table table-sm my-3 col-4-table" contenteditable="false">
+                    <thead>
+                        <tr>
+                            <th scope="col">Label</th>
+                            <th scope="col">Caption</th>
+                            <th scope="col">Citation</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let figMeta of AQ.sampleData.cuData.figure_metadata">
+                            <td>{{figMeta.label}}</td>
+                            <td>{{figMeta.caption}}</td>
+                            <td>{{figMeta.citation}}</td>
+                            <td class="status-icon">
+                                <div (click)="onAccept($event,figMeta)"><i class="fas fa-check"></i></div>
+                                <div (click)="onReject($event,figMeta)"><i class="fas fa-times"></i></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </ng-template>
         </e-tabitem>
         <e-tabitem>
@@ -72,15 +155,27 @@
                 <div> Table </div>
             </ng-template>
             <ng-template #content>
-                <app-editor></app-editor>
-            </ng-template>
-        </e-tabitem>
-        <e-tabitem>
-            <ng-template #headerText>
-                <div> Body </div>
-            </ng-template>
-            <ng-template #content>
-                <app-editor></app-editor>
+                <table class="table table-sm my-3 col-4-table" contenteditable="false">
+                    <thead>
+                        <tr>
+                            <th scope="col">Label</th>
+                            <th scope="col">Caption</th>
+                            <th scope="col">Citation</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let tableMeta of AQ.sampleData.cuData.table_metadata">
+                            <td>{{tableMeta.label}}</td>
+                            <td>{{tableMeta.caption}}</td>
+                            <td>{{tableMeta.citation}}</td>
+                            <td class="status-icon">
+                                <div (click)="onAccept($event,tableMeta)"><i class="fas fa-check"></i></div>
+                                <div (click)="onReject($event,tableMeta)"><i class="fas fa-times"></i></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </ng-template>
         </e-tabitem>
         <e-tabitem>
@@ -88,7 +183,27 @@
                 <div> References </div>
             </ng-template>
             <ng-template #content>
-                <app-editor></app-editor>
+                <table class="table table-sm my-3 col-4-table" contenteditable="false">
+                    <thead>
+                        <tr>
+                            <th scope="col">Label</th>
+                            <th scope="col">References</th>
+                            <th scope="col">Citation</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let refMeta of AQ.sampleData.cuData.reference_metadata">
+                            <td>{{refMeta.label}}</td>
+                            <td>{{refMeta.caption}}</td>
+                            <td>{{refMeta.citation}}</td>
+                            <td class="status-icon">
+                                <div (click)="onAccept($event,refMeta)"><i class="fas fa-check"></i></div>
+                                <div (click)="onReject($event,refMeta)"><i class="fas fa-times"></i></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </ng-template>
         </e-tabitem>
     </e-tabitems>

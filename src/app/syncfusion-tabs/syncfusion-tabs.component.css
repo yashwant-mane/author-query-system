@@ -6,4 +6,72 @@
 .e-tab .e-tab-header .e-toolbar-item .e-tab-text {
   text-transform: capitalize !important;
   font-size: 15px;
+  color: #000000;
+}
+.e-tab .e-tab-header .e-indicator {
+  background: #22b24b;
+}
+.col-3-table th:nth-child(1) {
+  width: 13%;
+}
+.col-3-table th:nth-child(2) {
+  width: 46%;
+}
+.col-3-table th:nth-child(3) {
+  width: 1%;
+}
+.col-4-table th:nth-child(1) {
+  width: 12%;
+}
+.col-4-table th:nth-child(2) {
+  width: 70%;
+}
+.col-4-table th:nth-child(3) {
+  width: 10%;
+}
+.col-4-table th:nth-child(4) {
+  width: 1%;
+}
+table {
+  line-height: 20px;
+}
+table th {
+  font-size: 14px;
+  padding: 7px 10px !important;
+}
+table td {
+  font-size: 13px !important;
+  line-height: 20px;
+  padding: 7px 10px !important;
+}
+table tbody tr .status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+table tbody tr td .fa-check {
+  color: #22b24b;
+  cursor: pointer;
+}
+/* table tbody tr td span .fa-check:hover {
+} */
+table tbody tr td .fa-times {
+  color: #d64113;
+  cursor: pointer;
+}
+/* table tbody tr td span .fa-times:hover {
+} */
+table tbody ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+table tbody ul li {
+  margin: 0px 5px;
+}
+.status-select {
+  border: none !important;
+  background: transparent !important;
+  padding: 0px 5px !important;
 }

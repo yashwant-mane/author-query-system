@@ -3,7 +3,7 @@
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 .custom-navbar img {
-  max-width: 85%;
+  max-width: 70%;
   max-height: 300px;
   padding-left: 15px;
 }
@@ -15,40 +15,146 @@
   width: 100%;
   position: fixed;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 15px 20px;
+  background: #fff;
+  z-index: 100;
+}
+.custom-toolbar {
+  margin-left: 40px;
+  width: auto;
+  color: rgba(0, 0, 0, 0.548);
+  font-weight: 400;
+}
+.btn-toolbar {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 10px;
+  transition: all 0.3s ease-in;
+}
+.custom-navbar .fas {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+.custom-navbar .btn-toolbar:hover,
+.custom-navbar .btn-toolbar:focus {
+  background: #eee;
+  outline: none;
 }
 .container-body {
-  margin-top: 65px;
+  margin-top: 62px;
   width: 100%;
 }
-#custom-toolbar {
-  margin-left: 30px;
-}
+
 .left-section {
   position: fixed;
   left: 0;
   min-height: 100%;
   height: auto;
+  width: 17%;
 }
 .tabs-section {
   margin-left: 17%;
   height: auto;
   min-height: 90vh;
+  background: #fafafa;
+  width: 60%;
+  padding: 10px;
 }
 .right-section {
   position: fixed;
   right: 0;
   min-height: 100%;
   height: auto;
+  width: 23%;
 }
-.right-section input[type="file"] {
-  display: none;
+
+.right-section h5 {
+  padding: 0px 10px !important;
 }
-#browseFileLabel {
-  font-size: 16px;
-  cursor: pointer;
-  background: rgba(105, 100, 100, 0.055);
-  padding: 5px 10px;
+.right-section label,
+.right-section h6 {
+  font-size: 13px !important;
+  margin-bottom: 10px !important;
+}
+.e-upload {
+  border: none !important;
+}
+.custom-editor-section {
+  padding: 10px;
+  font-size: 14px;
+}
+.custom-editor {
+  min-height: 80px;
+  height: auto;
+  width: 100%;
+  border: 1px solid #dee2e6;
+  outline: none;
+  font-size: 13px;
+  padding: 5px;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+.custom-editor:focus {
+  box-shadow: inset 0 0 4px -3px black;
+}
+.response-submit-btn,
+.remark-submit-btn {
+  background: #eee;
+  border: none;
+  padding: 5px 25px;
   border-radius: 5px;
+  outline: none;
+  margin-top: 20px;
+  margin-left: 205px;
+  right: 0;
+  transition: all 0.2s ease-in;
+}
+.response-submit-btn:hover {
+  background: #bdbdbd;
+  color: white;
+  box-shadow: 0px 0px 4px -2px black;
+}
+.response-list {
+  padding: 10px;
+}
+.response-list ol {
+  padding: 0px;
+  list-style: decimal !important;
+}
+.response-list ol li {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(222, 226, 230, 0);
+  border-radius: 10px;
+  padding: 7px;
+  margin-bottom: 10px;
+}
+.response-list ol li:hover {
+  border: 1px solid rgba(222, 226, 230, 1);
+}
+
+.response-list a {
+  color: #000;
+  font-size: 13px;
+  text-decoration: none;
+}
+.response-icons .fa-trash,
+.response-icons .fa-pencil-alt {
+  font-size: 13px !important;
+  margin: 0px 10px;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+}
+.response-icons .fa-pencil-alt:hover {
+  color: blue;
+}
+.response-icons .fa-trash:hover {
+  color: red;
+}
+
+.response-icons {
+  display: flex;
+  align-items: center;
 }

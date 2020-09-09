@@ -1,0 +1,305 @@
+[
+  {
+    "success": true,
+    "sampleData": {
+      "cuData": {
+        "title": {
+          "manuscript": [
+            "Dynamic mechanisms of summer Korean heat waves simulated in a long-term unforced CCSM3"
+          ]
+        },
+        "author_group": {
+          "manuscript": [
+            "Han-Kyoung Kim",
+            "Byung-Kwon Moon",
+            "Maeng-Ki Kim",
+            "Min-Ho Kwon"
+          ]
+        },
+        "affiliations": {
+          "manuscript": [
+            "1 Division of Science Education/Institute of Fusion Science, Jeonbuk National University, Jeonju, Korea",
+            "2 Department of Atmospheric Science, Kongju National University, Gongju, Korea",
+            "3 Korea Institute Ocean Science and Technology, Busan, Korea"
+          ]
+        },
+        "corresponding_author_address": {
+          "manuscript": [
+            "Corresponding Author:Byung-Kwon MoonEmail: moonbk@jbnu.ac.kr Tel: +82-63-270-2824 Fax: +82-63-270-2802"
+          ]
+        },
+        "corresponding_author_email_address": {
+          "manuscript": ["moonbk@jbnu.ac.kr"]
+        },
+        "abstract": {
+          "manuscript": "We investigate the natural variability of summer Korean heat waves through a long-term (500 year) unforced simulation using the Community Climate System Model version 3. A total of 82 extreme heat wave frequency (HWF) years are identified with positive barotropic geopotential height (GPH) anomalies over the Korean Peninsula. These anomalies represent the most important atmospheric pattern that causes Korean heat waves via adiabatic warming by anomalous subsidence. From a composite analysis of the extreme Korean HWF years, the Silk Road pattern (SRP) and Central Pacific (CP) sea surface temperature (SST) anomalies are selected as the driving factors of extreme Korean heat waves. The positive SRP is a west\u2013east upper-level Rossby wave train from the North Atlantic to East Asia under which positive barotropic GPH anomalies develop over the Korean Peninsula, thereby producing extreme heat waves. Cold CP SST anomalies induce cyclonic circulation and enhance convection over the subtropical western North Pacific through wind-evaporation-SST feedback, thereby acting as a source of the Pacific-Japan teleconnection pattern. They also cause positive barotropic GPH anomalies over the Korean Peninsula and intensify surface warming."
+        },
+        "keywords": {
+          "manuscript": [
+            "Heat waves",
+            "natural variability",
+            "Silk Road pattern",
+            "Pacific-Japan teleconnection pattern",
+            "Community Climate System Model version 3"
+          ]
+        },
+        "orcid_info": [
+          {
+            "author_name": "Byung-Kwon Moon",
+            "orc_id": "0000-0002-9005-7136",
+            "is_valid": "true"
+          }
+        ],
+        "figure_metadata": [
+          {
+            "label": "Figure 1",
+            "caption": "Composite maps of JJA mean (a) 200 and (b) 850 hPa GPH (shaded; m) anomalies for the selected extreme Korean HWF years. (c) and (d) are the same as (a) with the exception of Tmax (shaded; \u00b0C) and precipitation (shaded; mm day\u22121) anomalies, respectively. The contours represent statistically significant areas satisfying the 99% confidence level through Student\u2019s t-test.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Figure 2",
+            "caption": "Composite map of JJA mean SST (shaded; \u00b0C) anomalies for the selected extreme Korean HWF years. The contours represent statistically significant areas satisfying the 99% confidence level through Student\u2019s t-test. The purple box indicates the CP index region.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Figure 3",
+            "caption": "Regressed JJA mean (a) 200 and (b) 850 hPa GPH anomalies (shaded; m) against the SRP index. Composite map of (c) 200 hPa WAF (vector; m2 s\u22122)/stream function (shaded) and (d) vertical profile of GPH anomalies for the selected  positive SRP phases. The GPH anomalies in (d) are meridional averages over [30\u00b0\u201350\u00b0N] (purple box). The contours represent statistically significant areas satisfying the 99% confidence level through Student\u2019s t-test.",
+            "citation": "No"
+          },
+          {
+            "label": "Figure 4",
+            "caption": "Composite difference maps of JJA mean (a) 200 and (b) 850 hPa GPH (shaded; m) and wind vector anomalies between negative and positive CP phases. (c), (d), and (e) are the same as (a) with the exception of OLR (shaded; W m\u22122), omega (shaded; 10-2 Pa s-1), and SST (shaded; \u00b0C) anomalies, respectively. The omega anomalies are averaged over 115\u00b0\u2013140\u00b0E. Contours and vectors represent statistically significant areas satisfying the 99% confidence level through Student\u2019s t-test.",
+            "citation": "Yes"
+          }
+        ],
+        "supplementary_figure_metadata": [
+          {
+            "type": "supplementary-figure",
+            "label": "Figure S1",
+            "caption": "Interannual variation of HWF indices from observed and reanalysis datasets in JJA from 1982\u20132018.",
+            "citation": "Yes",
+            "table_float": null,
+            "file_name": "https://s3.amazonaws.com/test_tmp/cu-central-demo/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4/AS/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4.docx",
+            "is_external_figure": false,
+            "is_usable": "true"
+          },
+          {
+            "type": "supplementary-figure",
+            "label": "Figure S2",
+            "caption": "Normalized magnitude of the interannual simulated HWF over the Korean Peninsula. The black dashed line denotes one standard deviation, which represents the threshold for the extreme simulated HWF.",
+            "citation": "Yes",
+            "table_float": null,
+            "file_name": "https://s3.amazonaws.com/test_tmp/cu-central-demo/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4/AS/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4.docx",
+            "is_external_figure": false,
+            "is_usable": "true"
+          },
+          {
+            "type": "supplementary-figure",
+            "label": "Figure S3",
+            "caption": "Vertical profile of omega anomalies for selected extreme Korean HWF years in JJA from our simulation. The omega anomalies are averaged over the representative area of the Korean Peninsula (i.e., 34\u00b0\u201338\u00b0N, 125\u00b0\u2013130\u00b0E).",
+            "citation": "Yes",
+            "table_float": null,
+            "file_name": "https://s3.amazonaws.com/test_tmp/cu-central-demo/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4/AS/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4.docx",
+            "is_external_figure": false,
+            "is_usable": "true"
+          },
+          {
+            "type": "supplementary-figure",
+            "label": "Figure S4",
+            "caption": "Regressed (a) 200 hPa GPH anomalies (shaded; m) in reanalysis against the observed HWF index in JJA. (b) is the same as (a) except for 850 hPa. The contours represent statistically significant areas satisfying the 90% confidence level through Student\u2019s t-test.",
+            "citation": "Yes",
+            "table_float": null,
+            "file_name": "https://s3.amazonaws.com/test_tmp/cu-central-demo/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4/AS/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4.docx",
+            "is_external_figure": false,
+            "is_usable": "true"
+          },
+          {
+            "type": "supplementary-figure",
+            "label": "Figure S5",
+            "caption": "Leading EOF mode of JJA mean meridional wind anomalies at 200 hPa over [20\u00b0\u201360\u00b0N, 0\u00b0\u2013150\u00b0E] obtained to extract the Silk Road pattern. The parenthesis denotes the total variance of the leading EOF mode.",
+            "citation": "Yes",
+            "table_float": null,
+            "file_name": "https://s3.amazonaws.com/test_tmp/cu-central-demo/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4/AS/1b51f27d-d333-11ea-b5d9-0ea73b4a2af4.docx",
+            "is_external_figure": false,
+            "is_usable": "true"
+          }
+        ],
+        "table_metadata": [
+          {
+            "label": "Table 1",
+            "caption": "Number of years and mean number of heat wave days per year exceeding the threshold of one standard deviation. The symbol & represents the co-occurrence year of indices.",
+            "citation": "Yes"
+          }
+        ],
+        "reference_metadata": [
+          {
+            "label": "Choi et al., 2019",
+            "caption": "Choi, N., Lee, M.-I., Cha, D.-H., Lim, Y.-K. and Kim, K.-M. (2019) Decadal Changes in the Interannual Variability of Heatwaves in East Asia Caused by Atmospheric Teleconnection Changes. J. Climate, https://doi.org/10.1175/JCLI-D-19-0222.1.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Ding and Wang, 2005",
+            "caption": "Ding, Q. and Wang, B. (2005) Circumglobal teleconnection in the Northern Hemisphere summer. J. Climate, 18, 3483\u20133505.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Ding et al., 2011",
+            "caption": "Ding, Q., Wang, B., Wallace, J. M. and Branstator, G. (2011) Tropical\u2013extratropical teleconnections in boreal summer: Observed interannual variability, J. Climate, 24(7), 1878\u20131896.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Enomoto et al., 2003",
+            "caption": "Enomoto, T., Hoskins, B. J. and Matsuda, Y. (2003) The formation mechanism of the Bonin high in August. Q. J. R. Meteorol. Soc., 129(587), 157\u2013178.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Gill, 1980",
+            "caption": "Gill, A. E. (1980) Some simple solutions for the heat induced tropical circulation. Q. J. R. Meteorol. Soc., 106, 447\u2013462.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Hong et al., 2018",
+            "caption": "Hong, X.W., Lu, R.Y. and Li, S.L. (2018) Differences in the Silk Road Pattern and Its Relationship to the North Atlantic Oscillation between Early and Late Summers. J. Climate, 31, 9283\u20139292.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Huang et al., 2011",
+            "caption": "Huang, G., Liu, Y. and Huang, R.H. (2011) The interannual variability of summer rainfall in the arid and semiarid regions of northern China and its association with the northern hermisphere circumglobal teleconnection. Adv. Atmos. Sci., 28, 257\u2013268.",
+            "citation": "Yes"
+          },
+          {
+            "label": "IPCC, 2014",
+            "caption": "IPCC, (2014) Climate Change 2013: The Physical Science Basis. Cambridge: Cambridge University Press, 1535 pp, https://doi.org/10.1017/CBO9781107415324.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Kalnay et al., 1996",
+            "caption": "Kalnay, E., Kanamitsu, M., Kistler, R., Collins, W., Deaven, D., Gandin, L., Iredell, M., Saha, S., White, G., Woollen, J., Zhu, Y., Chelliah, M., Ebisuzaki, W., Higgins, W., Janowiak, J., Mo, K.C., Ropelewski, C., Wang, J., Leetmaa, A., Reynolds, R., Jenne, R. and Joseph, D. (1996) The NCEP/NCAR 40-Year Reanalysis Project. Bull. Am. Meteorol. Soc., 77, 437\u2013471.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Kim et al., 2019",
+            "caption": "Kim, M.-K., OH, J.-S., Park, C.-K., Min, S.-K., Boo, K.-O. and Kim, J.-H. (2019) Possible impact of the diabatic heating over the Indian subcontinent on heat waves in South Korea. Int. J. Climatol., 39, 1166\u20131180.",
+            "citation": "Yes"
+          },
+          {
+            "label": "KMA, 2019",
+            "caption": "KMA, (2019) Abnormal climate report 2018. 200 pp. Available at: http://www.climate.go.kr/home/cc_data/2019/2018_abnormal_climate_report.pdf.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Lee and Lee, 2016",
+            "caption": "Lee, W.-S. and Lee, M.-I. (2016) Interannual variability of heat waves in South Korea and their connection with large-scale atmospheric circulation patterns. Int. J. Climatol., 36, 4815\u20134830.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Lim and Seo, 2019",
+            "caption": "Lim, W.-I. and Seo, K.-H. (2019) Physical-Statistical Model for Summer Extreme Temperature Events over South Korea. J. Climate, 32, 1725\u20131742.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Lu et al., 2002",
+            "caption": "Lu, R., Oh, J.H. and Kim, B.J. (2002) A teleconnection pattern in upper-level meridional wind over the North African and Eurasian continent in summer. Tellus, 54A, 44\u201355.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Luo and Lau, 2019",
+            "caption": "Luo, M. and Lau, N.-C. (2019) Amplifying effect of ENSO on heat waves in China. Clim. Dyn., 52, 3277\u20133289.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Nitta, 1987",
+            "caption": "Nitta, T. (1987) Convective activities in the tropical western Paci\ufb01c and their impact on the Northern Hemisphere summer circulation. J. Meteor. Soc. Japan, 65, 373\u2013390.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Park and Schubert, 1997",
+            "caption": "Park, C.-K. and Schubert, S.D. (1997) On the nature of the 1994 East Asian drought. J. Climate, 24(18), 4773\u20134792.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Takaya and Nakamura, 2001",
+            "caption": "Takaya, K. and Nakamura, H. (2001) A formulation of a phase-independent wave-activity flux for stationary and migratory quasigeostrophic eddies on a zonally varying basic flow. J. Atmos. Sci., 58, 608\u2013627.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Wang et al., 2000",
+            "caption": "Wang, B., Wu, R. and Fu, X. (2000) Pacific\u2013east Asian teleconnection: how does ENSO Affect East Asian climate? J. Climate, 13, 1517\u20131536.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Wang and He, 2015",
+            "caption": "Wang, H. and He, S. (2015) The North China/Northeastern Asia severe summer drought in 2014. J. Climate, 28, 6667\u20136681.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Wu and Francis, 2019",
+            "caption": "Wu, B. and Francis, J.A. (2019) Summer Arctic cold anomaly dynamically linked to East Asian heat waves. J. Climate, 32, 1137\u20131149.Xia, J., Tu, K., Yan, Z. and Qi, Y. (2016) The super- heat wave in eastern China during July-August 2013: a perspective of climate change. Int. J. Climatol., 36, 1291\u20131298.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Yasui and Watanabe, 2010",
+            "caption": "Yasui, S. and Watanabe, M. (2010) Forcing processes of the summertime circumglobal teleconnection pattern in a dry AGCM. J. Climate, 23, 2093\u20132114.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Yeh et al., 2018",
+            "caption": "Yeh, S.-W., Won, Y.-J., Hong, J.-S., Lee, K.-J., Kwon, M.-H., Seo, K.-H. and Ham, Y.-G. (2018) The record-breaking heat wave in 2016 over South Korea and its physical mechanism. Mon. Wea. Rev., https://doi.org/10.1175/MWR-D-17-0205.1.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Yeo et al., 2019",
+            "caption": "Yeo, S.-R., Yeh, S.-W. and Lee, W.-S. (2019) Two types of heat wave in Korea associated summertime circumglobal teleconnection with atmospheric circulation pattern. J. Geophys. Res., https://doi.org/10.1029/2018JD030170.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Zhu et al., 2019",
+            "caption": "Zhu, B., Sun, B. and Wang, H. (2019) Dominant modes of interannual variability of extreme high-temperature events in eastern China during summer and associated mechanisms. Int. J. Climatol., 40, 841\u2013857.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Alexander et al., 2006",
+            "caption": "Alexander, M., Yin, J., Branstator, G., Capotondi, A., Cassou, C., Cullather, R., Kwon, Y.-O., Norris, J., Scott, J. and Wainer, I. (2006) Extratropical Atmosphere\u2013Ocean Variability in CCSM3. J. Climate, 19, 2496\u20132525.",
+            "citation": "Yes"
+          },
+          {
+            "label": "Collins et al., 2006",
+            "caption": "Collins, W.D., Bitz, C.M., Blackmon, M.L., Bonan, G.B., Bretherton, C.S., Carton, J.A., Chang, P., Doney, S.C., Hack, J.J., Henderson, T.B., Kiehl, J.T., Large, W.G., McKenna, D.S., Santer, B.D. and Smith, R.D. (2006) The Community Climate System Model version 3 (CCSM3). J. Climate, 19, 2122\u20132143.",
+            "citation": "Yes"
+          }
+        ],
+        "supplementary_files_information": [
+          "ASL_heatwaves_supporting_infomation-R2.docx"
+        ]
+      },
+      "journalDetails": {
+        "tabname": "Journal Information",
+        "JournalTitle": "Journal of Money, Credit and Banking (JMCB)",
+        "Journaldata": [
+          {
+            "ShortTitle": "Journal of Money, Credit and Banking",
+            "DOI": "10.1111/(ISSN)1538-4616",
+            "electronicISSN": "1538-4616",
+            "printISSN": "0022-2879",
+            "ArticleID": "JMCB12695",
+            "Articletype": "article",
+            "ArticleDOI": "10.1111/jmcb.12695",
+            "Copyright": "© 2020 The Ohio State University"
+          }
+        ]
+      },
+      "contactData": {
+        "tabname": "Contact Information",
+        "ContactData": [
+          {
+            "Vendor Name": "TNQ",
+            "Vendor Email": "xxxx@gmail.com",
+            "Production Editor": "john doe",
+            "Corresponding Author Name": "john doe",
+            "Corresponding Author EmailID": "john@gmail.com"
+          }
+        ]
+      }
+    }
+  }
+]
