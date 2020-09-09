@@ -12,11 +12,28 @@ export class AppComponent {
   constructor() {}
   ngOnInit() {
     $('.right-section').children().hide();
+    this.activeEditor();
+  }
+  doc;
+  iframes = document.getElementsByTagName('iframe');
+  activeEditor() {
+    for (var i = 0, len = this.iframes.length, doc; i < len; ++i) {
+      doc =
+        this.iframes[i].contentDocument ||
+        this.iframes[i].contentWindow.document;
+      doc.designMode = 'on';
+      this.doc = doc;
+    }
+  }
+  transform(option, argument) {
+    this.doc.document.execCommand(option, false, argument);
   }
   appendBrowse() {
     const browseBtn = document.querySelector('custom-toolbar');
     $(browseBtn).append($('.e-file-select-wrap'));
   }
+
+  onTransform() {}
   onBold() {
     document.execCommand('bold');
   }
@@ -50,7 +67,7 @@ export class AppComponent {
   }
   onComment() {
     $('.right-section').children().hide();
-    $('.comment-section').show();
+    $('.response-list-section').show();
     // var element = document.querySelector('.right-section');
     // var attachRef = document
     //   .querySelector('.attachment-section')
@@ -64,13 +81,40 @@ export class AppComponent {
     // // this.isShowDiv = !this.isShowDiv;
   }
   acceptResponseArr: { id: string; query: string; response: string }[] = [
-    { id: '1', query: 'chech name', response: 'ok' },
+    {
+      id: 'com1',
+      query:
+        'Dynamic mechanisms of summer Korean heat waves simulated in a long-term unforced CCSM3',
+      response:
+        'Dynamic mechanisms of summer Korean heat waves simulated in a long-term unforced CCSM3',
+    },
+    { id: 'com2', query: 'Han-Kyoung Kim', response: 'Han-Kyoung Kim' },
+    { id: 'com3', query: 'Byung-Kwon Moon', response: 'Byung-Kwon Moon' },
+    {
+      id: 'com4',
+      query:
+        '	1 Division of Science Education/Institute of Fusion Science, Jeonbuk National University, Jeonju, Korea',
+      response:
+        '	1 Division of Science Education/Institute of Fusion Science, Jeonbuk National University, Jeonju, Korea',
+    },
+    {
+      id: 'com5',
+      query: 'Pacific-Japan teleconnection pattern',
+      response: 'Pacific-Japan teleconnection pattern',
+    },
+    {
+      id: 'com6',
+      query: 'Community Climate System Model version 3',
+      response: 'Community Climate System Model version 3',
+    },
   ];
   rejectResponseArr: { query: string; remark: string }[] = [];
   commentArr = [];
   btnClick = 0;
   oldQuery;
+  responseCount: number = this.acceptResponseArr.length;
   onResponseAdd() {
+    console.log('addedd');
     var responseEditor = $('#response-Editor').html().toString();
     var authorQuery = $('.auQuery').html().toString();
     if (responseEditor == '') {
@@ -90,6 +134,8 @@ export class AppComponent {
       $('#response-Editor').empty();
       this.oldQuery = authorQuery;
     }
+    this.responseCount = this.acceptResponseArr.length;
+    console.log(this.responseCount);
   }
   onRemarkAdd() {
     var remarkEditor = $('#remark-Editor').html().toString();
@@ -102,7 +148,11 @@ export class AppComponent {
       $('#remark-Editor').empty();
     }
   }
-  onLiClick(item) {}
+  onResDel(event, i) {
+    const index: number = this.acceptResponseArr.indexOf(i);
+    this.acceptResponseArr.splice(i, 1);
+    this.responseCount = this.acceptResponseArr.length;
+  }
   onEditResponse(response, index) {
     $('.right-section').children().hide();
     $('.accept-response-section').show();

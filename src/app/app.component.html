@@ -2,79 +2,87 @@
   <div class="custom-navbar">
     <div><img src="../assets/wiley-Logo.png" alt="wiley Logo" /></div>
     <div class="custom-toolbar d-flex align-items-center justify-content-around" id="custom-toolbar ">
-      <div><button class="btn-toolbar" (click)="onBold()"><i class="fas fa-bold"></i></button></div>
-      <div><button class="btn-toolbar" (click)="onItalic()"><i class="fas fa-italic"></i></button></div>
-      <div><button class="btn-toolbar" (click)="onUnderline()"><i class="fas fa-underline"></i></button></div>
-      <div><button class="btn-toolbar" (click)="onSubscript()"><i class="fas fa-subscript"></i></button></div>
-      <div><button class="btn-toolbar" (click)="onSuperscript()"><i class="fas fa-superscript"></i></button></div>
-      <div><button class="btn-toolbar" (click)="onAttach()"><i class="fas fa-paperclip"></i></button></div>
-      <div><button class="btn-toolbar" (click)="onComment()"><i class="far fa-comment-alt"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onBold()"><i class="fas fa-bold" data-toggle="tooltip"
+            data-placement="top" title="Bold"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onItalic()"><i class="fas fa-italic" data-toggle="tooltip"
+            data-placement="top" title="Italic"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onUnderline()"><i class="fas fa-underline" data-toggle="tooltip"
+            data-placement="top" title="Underline"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onSubscript()"><i class="fas fa-subscript" data-toggle="tooltip"
+            data-placement="top" title="Subscript"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onSuperscript()"><i class="fas fa-superscript" data-toggle="tooltip"
+            data-placement="top" title="Superscript"></i></button></div>
+      <div><button class="btn-toolbar" (click)="onAttach()"><i class="fas fa-paperclip" data-toggle="tooltip"
+            data-placement="top" title="Attach"></i></button></div>
+      <div class="notification"><button class="btn-toolbar" (click)="onComment()"><i class="far fa-comment-alt"
+            data-toggle="tooltip" data-placement="top" title="Comment"></i></button><span
+          class="count-badge">{{responseCount}}</span>
+      </div>
     </div>
   </div>
-  <div class="row container-body border-top">
+  <div class="row container-body">
     <div class="left-section"></div>
-    <div class="tabs-section border-left border-right">
+    <div class="tabs-section">
       <app-syncfusion-tabs #child></app-syncfusion-tabs>
     </div>
-    <div class="right-section d-flex flex-column py-3 ">
+    <div class="right-section d-flex flex-column">
       <!-- Attachments div -->
       <div class="attachment-section">
-        <div class="attachments-heading">
-          <h5>Attachments</h5>
+        <div class="header">
+          Attachments
         </div>
-        <div class="attachments-body">
-          <hr />
+        <div class="body">
           <ejs-uploader #defaultupload [autoUpload]='true' [asyncSettings]='path' (success)="onUploadSuccess($event)"
             (failure)="onUploadFailure($event)" (created)="appendBrowse()"></ejs-uploader>
         </div>
       </div>
       <!-- Accept Response -->
       <div class="accept-response-section">
-        <div class="response-heading">
-          <h5>Query Response</h5>
+        <div class="header">
+          Query Response
         </div>
-        <div class="response-body">
-          <hr />
+        <div class="body">
           <div class="custom-editor-section" id="response-Editor-section">
-            <label>Write response</label>
-            <div class="custom-editor" id="response-Editor" contenteditable="true">
-            </div>
+            <div class="auQuery"></div>
+            <label>Write a response</label>
+            <!-- <div class="custom-editor" id="response-Editor" contenteditable="true">
+            </div> -->
+            <div><iframe name="editor" id="editor"></iframe></div>
             <button type="button" class="response-submit-btn" (click)="onResponseAdd()">Add</button>
           </div>
         </div>
       </div>
-      <!-- Reject Response -->
+      <!-- Reject Response section 
       <div class="reject-response-section">
-        <div class="response-heading">
-          <h5>Query Response</h5>
+        <div class="header">
+          Query Response
         </div>
-        <div class="response-body">
-          <hr />
+        <div class="body">
           <div class="custom-editor-section" id="remark-Editor-section">
-            <h6 class="auQuery">AQ:</h6>
             <label>Remark</label>
             <div class="custom-editor" id="remark-Editor" contenteditable="true">
             </div>
             <button class="remark-submit-btn" (click)="onRemarkAdd()">Add</button>
           </div>
         </div>
-      </div>
-      <!-- Comment -->
-      <div class="comment-section">
-        <div class="response-heading">
-          <h5>Query Response</h5>
+      </div>-->
+      <!-- Response List -->
+      <div class="response-list-section">
+        <div class="header">
+          Queries Responded
         </div>
-        <div class="response-body">
-          <hr />
+        <div class="body">
           <div class="response-list">
             <ol>
-              <li *ngFor="let item of acceptResponseArr; let i = index" (click)="onLiClick(item)">
+              <li *ngFor="let item of acceptResponseArr; let i = index">
                 <div>
-                  <div><a href="#{{item.id}}">{{item.response}}</a></div>
+                  <div><a href="#{{item.id}}" [innerHTML]="item.response"></a></div>
                 </div>
                 <div class="response-icons">
-                  <div (click)="onEditResponse(item,i)"><i class="fas fa-pencil-alt"></i></div>
-                  <div (click)="acceptResponseArr.splice(i,1)"><i class="fas fa-trash"></i></div>
+                  <div (click)="onEditResponse(item,i)"><i class="fas fa-pencil-alt" data-toggle="tooltip"
+                      data-placement="top" title="Edit"></i></div>
+                  <div (click)="onResDel($event,i)"><i class="fas fa-trash" data-toggle="tooltip" data-placement="top"
+                      title="Delete"></i></div>
                 </div>
               </li>
             </ol>

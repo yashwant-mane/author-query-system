@@ -73,48 +73,68 @@
                                 <td>Title</td>
                                 <td>{{title}}</td>
                                 <td class="status-icon">
-                                    <div (click)="onAccept($event,title)"><i class="fas fa-check"></i></div>
-                                    <div (click)="onReject($event,title)"><i class="fas fa-times"></i></div>
+                                    <div (click)="onAccept($event,title)"><i class="fas fa-check" data-toggle="tooltip"
+                                            data-placement="top" title="Accept"></i></div>
+                                    <div (click)="onReject($event,title)"><i class="fas fa-times" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
                                 </td>
                             </tr>
                             <tr *ngFor="let data of AQ.sampleData.cuData.author_group.manuscript">
                                 <td>Author</td>
                                 <td scope="row">{{data}}</td>
                                 <td class="status-icon">
-                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
-                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check" data-toggle="tooltip"
+                                            data-placement="top" title="Accept"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
                                 </td>
                             </tr>
                             <tr *ngFor="let data of AQ.sampleData.cuData.affiliations.manuscript">
                                 <td>Affiliation</td>
                                 <td scope="row">{{data}}</td>
                                 <td class="status-icon">
-                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
-                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
                                 </td>
                             </tr>
                             <tr *ngFor="let data of AQ.sampleData.cuData.corresponding_author_address.manuscript">
                                 <td>Corresponding Author Address</td>
                                 <td scope="row">{{data}}</td>
                                 <td class="status-icon">
-                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
-                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
                                 </td>
                             </tr>
                             <tr *ngFor="let data of AQ.sampleData.cuData.corresponding_author_email_address.manuscript">
                                 <td>Corresponding Author Email Address</td>
                                 <td scope="row">{{data}}</td>
                                 <td class="status-icon">
-                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
-                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
                                 </td>
                             </tr>
                             <tr *ngFor="let data of AQ.sampleData.cuData.keywords.manuscript">
                                 <td>Keyword</td>
                                 <td scope="row">{{data}}</td>
                                 <td class="status-icon">
-                                    <div (click)="onAccept($event,data)"><i class="fas fa-check"></i></div>
-                                    <div (click)="onReject($event,data)"><i class="fas fa-times"></i></div>
+                                    <div (click)="onAccept($event,data)"><i class="fas fa-check" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
+                                    <div (click)="onReject($event,data)"><i class="fas fa-times" data-toggle="tooltip"
+                                            data-placement="top" title="Accept" data-toggle="tooltip"
+                                            data-placement="top" title="Reject"></i></div>
                                 </td>
                             </tr>
                         </tbody>

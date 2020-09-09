@@ -18,6 +18,7 @@
   align-items: flex-start;
   padding: 15px 20px;
   background: #fff;
+  border-bottom: 1px solid #dee2e6;
   z-index: 100;
 }
 .custom-toolbar {
@@ -60,23 +61,41 @@
   min-height: 90vh;
   background: #fafafa;
   width: 60%;
-  padding: 10px;
+  padding: 2px 10px;
+  border-right: 1px solid #dee2e6;
+  border-left: 1px solid #dee2e6;
 }
 .right-section {
   position: fixed;
   right: 0;
-  min-height: 100%;
-  height: auto;
+  height: 90%;
   width: 23%;
 }
-
-.right-section h5 {
-  padding: 0px 10px !important;
-}
-.right-section label,
-.right-section h6 {
+.right-section label {
   font-size: 13px !important;
   margin-bottom: 10px !important;
+}
+
+.attachment-section,
+.accept-response-section,
+.response-list-section {
+  height: 100%;
+}
+.attachment-section .header,
+.accept-response-section .header,
+.response-list-section .header {
+  height: 7%;
+  border-bottom: 1px solid #dee2e6;
+  padding: 8px 10px;
+  font-size: 15px;
+}
+.attachment-section .body,
+.accept-response-section .body {
+  height: 93%;
+}
+.response-list-section .body {
+  height: 93%;
+  overflow-y: scroll;
 }
 .e-upload {
   border: none !important;
@@ -110,7 +129,7 @@
   right: 0;
   transition: all 0.2s ease-in;
 }
-.response-submit-btn:hover {
+.ssubmit-btn:hover {
   background: #bdbdbd;
   color: white;
   box-shadow: 0px 0px 4px -2px black;
@@ -126,13 +145,10 @@
   display: flex;
   justify-content: space-between;
   transition: all 0.3s ease-in;
-  border: 1px solid rgba(222, 226, 230, 0);
+  border: 1px solid rgba(222, 226, 230, 1);
   border-radius: 10px;
   padding: 7px;
   margin-bottom: 10px;
-}
-.response-list ol li:hover {
-  border: 1px solid rgba(222, 226, 230, 1);
 }
 
 .response-list a {
@@ -143,7 +159,7 @@
 .response-icons .fa-trash,
 .response-icons .fa-pencil-alt {
   font-size: 13px !important;
-  margin: 0px 10px;
+  margin: 0px 8px;
   cursor: pointer;
   transition: color 0.2s ease-out;
 }
@@ -157,4 +173,32 @@
 .response-icons {
   display: flex;
   align-items: center;
+}
+
+/* Count badge */
+.notification {
+  position: relative;
+}
+.notification .count-badge {
+  position: absolute;
+  top: -9px;
+  right: -7px;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  height: 10px;
+  width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #4d841d;
+  color: white;
+}
+iframe {
+  border: 0;
+  width: 100%;
+  margin-bottom: 5pt;
+  height: 50pt;
+  border: 1px solid rgba(222, 226, 230, 1);
 }

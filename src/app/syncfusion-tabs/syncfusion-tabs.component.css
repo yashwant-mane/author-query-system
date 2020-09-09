@@ -75,3 +75,37 @@ table tbody ul li {
   background: transparent !important;
   padding: 0px 5px !important;
 }
+
+/* Tooltip container */
+.tooltips {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltips .tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  background-color: #555;
+  color: #fff !important;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -35px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltips:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
